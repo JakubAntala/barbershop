@@ -1,6 +1,12 @@
 # Barber Shop Majky — Still In Progress !
 Landing Page
 
+![Status](https://img.shields.io/badge/status-work%20in%20progress-orange)
+![Stack](https://img.shields.io/badge/stack-React%20%2B%20Vite%20%2B%20Tailwind-blue)
+![License](https://img.shields.io/badge/license-private-lightgrey)
+
+> 🚧 **Work in progress** — actively being developed. Core landing page is implemented; deployment, image optimisation and polish are still in flight.
+
 > One-page web for **Barber Shop Majky** in Hlohovec — a real-world client project. Built as a modern, animation-rich React + Vite landing page with online booking through Bookio.
 
 🔗 **Live booking:** [services.bookio.com/barbershop-majky](https://services.bookio.com/barbershop-majky/widget?lang=sk)
@@ -120,12 +126,25 @@ The catalogue mirrors the live Bookio menu (see [`content/pricing.md`](content/p
 - **Vlasová Mezoterapia** · from 80 €
 - **Masáž hlavy** add-on · +10 €
 
-## Roadmap
+## Project status
 
+🚧 **Work in progress** — this is an active, evolving project. The site is being iteratively improved together with the client.
+
+**Done so far**
+- [x] Static HTML mockup of the visual concept (`mockup.html`)
+- [x] Vite + React + Tailwind setup with full design system
+- [x] All page sections built and wired up (Hero, About, Services, Spa, Gallery, CTA, Contact, Footer)
+- [x] Framer Motion scroll animations + desktop parallax
+- [x] Mobile-first responsive layout
+- [x] Bookio reservation integration on every CTA
+
+**Up next**
 - [ ] Deploy to Vercel / Netlify under a custom domain
 - [ ] Lighthouse 95+ pass on all metrics
-- [ ] Image optimisation (responsive `srcset`)
-- [ ] CMS-driven gallery (so the barber can swap photos without a deploy)
+- [ ] Image optimisation (responsive `srcset`, WebP)
+- [ ] SEO + Open Graph metadata
+- [ ] CMS-driven gallery (so the barber can swap photos without a redeploy)
+- [ ] Multi-language version (EN)
 
 ## Author
 
