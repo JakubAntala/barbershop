@@ -11,11 +11,11 @@
 
 ## Highlights
 
-- 🎨 **Custom dark theme** with gold/rust accents and three-font typography (Bebas Neue · Playfair Display · Inter)
-- 📜 **Scroll-driven animations** with Framer Motion + parallax hero & feature sections
-- 📅 **Bookio integration** — every CTA links to the real reservation widget
-- 💈 **Full barbershop landing flow** — Hero, About, Services (6 cards), Featured Head Spa, Gallery, CTA, Contact, Footer
-- 📱 **Responsive** — mobile-first, touch-aware (parallax disabled on mobile to save battery)
+-  **Custom dark theme** with gold/rust accents and three-font typography (Bebas Neue · Playfair Display · Inter)
+-  **Scroll-driven animations** with Framer Motion + parallax hero & feature sections
+-  **Bookio integration** — every CTA links to the real reservation widget
+-  **Full barbershop landing flow** — Hero, About, Services (6 cards), Featured Head Spa, Gallery, CTA, Contact, Footer
+-  **Responsive** — mobile-first, touch-aware (parallax disabled on mobile to save battery)
 
 ## Tech stack
 
