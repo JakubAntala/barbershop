@@ -1,11 +1,11 @@
-# Barber Shop Majky — Still In Progress !
+# Barber Shop Majky - Still In Progress !
 Landing Page
 
 ![Status](https://img.shields.io/badge/status-work%20in%20progress-orange)
 ![Stack](https://img.shields.io/badge/stack-React%20%2B%20Vite%20%2B%20Tailwind-blue)
 ![License](https://img.shields.io/badge/license-private-lightgrey)
 
-> 🚧 **Work in progress** — actively being developed. Core landing page is implemented; deployment, image optimisation and polish are still in flight.
+>  **Work in progress** — actively being developed. Core landing page is implemented; deployment, image optimisation and polish are still in flight.
 
 > One-page web for **Barber Shop Majky** in Hlohovec — a real-world client project. Built as a modern, animation-rich React + Vite landing page with online booking through Bookio.
 
