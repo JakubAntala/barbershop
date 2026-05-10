@@ -1,0 +1,135 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+  * {
+    box-sizing: border-box;
+    /* Disable the ugly blue tap highlight on mobile */
+    -webkit-tap-highlight-color: transparent;
+  }
+  html {
+    scroll-behavior: smooth;
+    /* Prevent iOS Safari from auto-zooming on form input focus */
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+  body {
+    @apply bg-bg text-ink font-sans font-light;
+    line-height: 1.6;
+    overflow-x: hidden;
+    /* Better font rendering on mobile */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  h1, h2, h3, .display {
+    @apply font-display tracking-wide font-normal;
+    line-height: 1.05;
+  }
+  /* Improve touch scrolling momentum on iOS */
+  body, main, section {
+    -webkit-overflow-scrolling: touch;
+  }
+  /* Make all anchors and buttons feel responsive on touch */
+  a, button {
+    touch-action: manipulation;
+  }
+}
+
+@layer components {
+  .container-x {
+    @apply max-w-[1200px] mx-auto px-5 md:px-6;
+  }
+
+  .btn-primary {
+    @apply inline-block relative overflow-hidden bg-gold text-bg px-7 md:px-9 py-3.5 md:py-4 text-[11px] md:text-xs uppercase font-semibold rounded-sm transition-all duration-300;
+    letter-spacing: 0.25em;
+  }
+  .btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 0; left: -100%;
+    width: 100%; height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+    transition: left .6s;
+  }
+  @media (hover: hover) {
+    .btn-primary:hover {
+      @apply bg-white -translate-y-0.5;
+      box-shadow: 0 14px 40px rgba(201,163,90,0.3);
+    }
+    .btn-primary:hover::before { left: 100%; }
+  }
+  .btn-primary:active {
+    @apply scale-[0.98];
+  }
+
+  .btn-ghost {
+    @apply inline-block border border-line text-ink px-7 md:px-9 py-3.5 md:py-4 text-[11px] md:text-xs uppercase font-semibold rounded-sm transition-all duration-300;
+    letter-spacing: 0.25em;
+  }
+  @media (hover: hover) {
+    .btn-ghost:hover {
+      @apply border-gold text-gold -translate-y-0.5;
+    }
+  }
+  .btn-ghost:active {
+    @apply border-gold text-gold scale-[0.98];
+  }
+
+  .sec-kicker {
+    @apply text-gold text-[10px] md:text-[11px] uppercase block mb-3 md:mb-4;
+    letter-spacing: 0.4em;
+  }
+
+  .sec-title {
+    @apply text-center mb-12 md:mb-[72px];
+  }
+}
+
+/* Custom keyframes not covered by tailwind config */
+@keyframes heroLogo {
+  0% { opacity: 0; transform: translateY(-20px) scale(0.92); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.hero-logo-anim {
+  animation: heroLogo 1.2s cubic-bezier(.2,.9,.3,1) .3s both;
+  filter: drop-shadow(0 10px 40px rgba(0,0,0,0.9));
+}
+
+@keyframes shimmerMove {
+  0% { left: -100%; }
+  50%, 100% { left: 100%; }
+}
+
+@keyframes scrollBounce {
+  0% { opacity: 0; transform: translate(-50%, -10px); }
+  20%, 80% { opacity: 1; transform: translate(-50%, 0); }
+  50% { transform: translate(-50%, 6px); }
+  100% { opacity: 1; transform: translate(-50%, 0); }
+}
+.scroll-indicator-anim { animation: scrollBounce 2.2s ease-in-out infinite 2s both; }
+
+/* Hero grid overlay */
+.hero-grid {
+  background-image:
+    linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+  background-size: 80px 80px;
+  -webkit-mask-image: radial-gradient(ellipse at center, black 30%, transparent 75%);
+          mask-image: radial-gradient(ellipse at center, black 30%, transparent 75%);
+}
+
+/* Respect users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
