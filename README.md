@@ -1,4 +1,5 @@
-# Barber Shop Majky — Landing Page
+# Barber Shop Majky — Still In Progress !
+Landing Page
 
 > One-page web for **Barber Shop Majky** in Hlohovec — a real-world client project. Built as a modern, animation-rich React + Vite landing page with online booking through Bookio.
 
