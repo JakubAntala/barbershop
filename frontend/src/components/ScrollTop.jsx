@@ -21,7 +21,7 @@ export default function ScrollTop() {
           aria-label="Scroll to top"
           className="fixed bottom-5 right-5 md:bottom-7 md:right-7 w-12 h-12 md:w-12 md:h-12 bg-gold text-bg border-0 rounded-sm flex items-center justify-center cursor-pointer text-lg font-bold z-[50] transition-all md:hover:bg-white md:hover:-translate-y-1 active:scale-95"
           style={{
-            boxShadow: '0 10px 30px rgba(201,163,90,0.35)',
+            boxShadow: '0 10px 30px rgba(198,202,206,0.35)',
             paddingBottom: 'env(safe-area-inset-bottom, 0)',
           }}
         >

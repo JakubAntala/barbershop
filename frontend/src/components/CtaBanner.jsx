@@ -9,16 +9,16 @@ export default function CtaBanner() {
       className="relative overflow-hidden py-16 md:py-[100px] text-center border-y border-line"
       style={{
         background:
-          'linear-gradient(135deg, rgba(10,10,10,0.92), rgba(10,10,10,0.98)), radial-gradient(circle at 20% 50%, rgba(201,163,90,0.15), transparent 50%)',
+          'linear-gradient(135deg, rgba(10,10,10,0.92), rgba(10,10,10,0.98)), radial-gradient(circle at 20% 50%, rgba(198,202,206,0.15), transparent 50%)',
       }}
     >
       <div
         className="absolute w-[200px] md:w-[300px] h-[200px] md:h-[300px] rounded-full opacity-40 -top-[100px] md:-top-[150px] left-[5%] md:left-[10%] animate-float-slow"
-        style={{ background: '#c9a35a', filter: 'blur(60px)' }}
+        style={{ background: '#c6cace', filter: 'blur(60px)' }}
       />
       <div
         className="absolute w-[200px] md:w-[300px] h-[200px] md:h-[300px] rounded-full opacity-40 -bottom-[100px] md:-bottom-[150px] right-[5%] md:right-[10%] animate-float-slow [animation-direction:reverse] [animation-duration:10s]"
-        style={{ background: '#8b3a1f', filter: 'blur(60px)' }}
+        style={{ background: '#565b62', filter: 'blur(60px)' }}
       />
 
       <motion.div

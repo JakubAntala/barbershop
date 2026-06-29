@@ -59,7 +59,7 @@
   @media (hover: hover) {
     .btn-primary:hover {
       @apply bg-white -translate-y-0.5;
-      box-shadow: 0 14px 40px rgba(201,163,90,0.3);
+      box-shadow: 0 14px 40px rgba(198,202,206,0.3);
     }
     .btn-primary:hover::before { left: 100%; }
   }
@@ -122,6 +122,20 @@
   background-size: 80px 80px;
   -webkit-mask-image: radial-gradient(ellipse at center, black 30%, transparent 75%);
           mask-image: radial-gradient(ellipse at center, black 30%, transparent 75%);
+}
+
+/* Zvýraznenie Combo kartičky po prekliku z akciovej ponuky */
+@keyframes promoPulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(198, 202, 206, 0), 0 20px 50px rgba(0, 0, 0, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 0 3px rgba(198, 202, 206, 0.85), 0 24px 60px rgba(198, 202, 206, 0.3);
+  }
+}
+.promo-pulse {
+  border-color: #c6cace !important;
+  animation: promoPulse 1.3s ease-in-out 2;
 }
 
 /* Respect users who prefer reduced motion */

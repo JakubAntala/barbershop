@@ -78,6 +78,23 @@ export default function Contact() {
               </div>
             </a>
 
+            <a
+              href="mailto:barbershopmajky@gmail.com"
+              className="flex gap-4 md:gap-5 mb-6 md:mb-7 items-start group md:hover:translate-x-1.5 active:opacity-80 transition-all"
+            >
+              <div className="w-11 h-11 md:w-12 md:h-12 min-w-[2.75rem] md:min-w-[3rem] border border-gold text-gold flex items-center justify-center text-base md:text-lg transition-all md:group-hover:bg-gold md:group-hover:text-bg">
+                ✉
+              </div>
+              <div>
+                <div className="text-[10px] md:text-[11px] tracking-[0.25em] md:tracking-[0.3em] text-muted uppercase mb-1">
+                  E-mail
+                </div>
+                <div className="text-base md:text-lg text-ink md:group-hover:text-gold transition-colors break-all">
+                  barbershopmajky@gmail.com
+                </div>
+              </div>
+            </a>
+
             <div className="flex gap-4 md:gap-5 items-start">
               <div className="w-11 h-11 md:w-12 md:h-12 min-w-[2.75rem] md:min-w-[3rem] border border-gold text-gold flex items-center justify-center text-base md:text-lg">
                 ⏱

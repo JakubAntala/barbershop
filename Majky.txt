@@ -1,0 +1,28 @@
+Bookio : zostava
+
+Foto: doplnenie 
+Videa: DOPLNIT 
+
+Bookio api potiahnut Recenzie: + Vybrat nejake s textom.
+
+Brada a vlasy spolu ako jednu karticku
+Mezoterapiu pridat karticku tiez ako je ritual 
+
+Vyskusat a otestovat Sivy gradient farbieb namiesto tej zlatej. 
+
+
+Preklik z karticiek a pridat mezoterapiu 
+ do  navbaru Mezoterapiu a keby to bolo moc siroke tak potom preklik len z jedneho navbaru
+
+
+Pridat fbb logo a ig logo + fb link na redirect
+
+mail:
+barbershopmajky@gmail.com
++ poslat text k terapiam na podstranky
+
+Poslat HTML Mockup ako appku aj na mail.
+
+
+Pridat alert pri otovreni stranky ako upozornenie na novinky, kde bude tlacidlo a toto tlacidlo
+ rovno prehodi a redirectne na novy produkt na stranke 

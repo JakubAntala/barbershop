@@ -5,6 +5,7 @@ const links = [
   { href: '#about', label: 'O nás' },
   { href: '#services', label: 'Služby' },
   { href: '#spa', label: 'Head Spa' },
+  { href: '#mezoterapia', label: 'Mezoterapia' },
   { href: '#gallery', label: 'Galéria' },
   { href: '#contact', label: 'Kontakt' },
 ]
@@ -88,7 +89,7 @@ export default function Nav() {
           target="_blank"
           rel="noreferrer"
           className="hidden md:inline-block bg-gold text-bg px-5 py-2.5 rounded-sm text-xs font-semibold tracking-[0.15em] transition-all
-            hover:bg-gold-light hover:-translate-y-0.5 hover:shadow-[0_6px_20px_rgba(201,163,90,0.35)]"
+            hover:bg-gold-light hover:-translate-y-0.5 hover:shadow-[0_6px_20px_rgba(198,202,206,0.35)]"
         >
           Rezervovať
         </a>
@@ -130,7 +131,7 @@ export default function Nav() {
             className="fixed inset-0 z-[90] md:hidden"
             style={{
               background:
-                'radial-gradient(ellipse at top, rgba(201,163,90,0.1) 0%, transparent 60%), #0a0a0a',
+                'radial-gradient(ellipse at top, rgba(198,202,206,0.1) 0%, transparent 60%), #0a0a0a',
             }}
           >
             <div className="flex flex-col items-center justify-center h-full gap-8 px-6">

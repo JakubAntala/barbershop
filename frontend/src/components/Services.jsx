@@ -16,6 +16,7 @@ const services = [
     desc: 'Tvarovanie brady, hot towel, kontúrovanie, umývanie, ošetrenie, konečná úprava.',
   },
   {
+    id: 'combo',
     tag: 'Combo · Najobľúbenejšie',
     name: 'Combo',
     price: '32 €',
@@ -28,6 +29,7 @@ const services = [
     price: '120 €',
     duration: '1h 30min',
     desc: 'Autentický japonský rituál pre hlbokú relaxáciu a zdravie pokožky hlavy.',
+    href: '#spa',
   },
   {
     tag: 'Japanese Head Spa · Premium',
@@ -35,6 +37,7 @@ const services = [
     price: '180 €',
     duration: '2h 30min',
     desc: 'Najkomplexnejší rituál. Plná starostlivosť o pokožku hlavy, vlasy a zmysly.',
+    href: '#spa',
   },
   {
     tag: 'Trichológia',
@@ -42,8 +45,18 @@ const services = [
     price: 'od 80 €',
     duration: '40 min',
     desc: 'Profesionálne riešenie padania vlasov a posilnenie vlasových folikulov.',
+    href: '#mezoterapia',
   },
 ]
+
+// Plynulý scroll na sekciu s offsetom pod sticky navbar
+const scrollToSection = (href) => {
+  const target = document.querySelector(href)
+  if (target) {
+    const y = target.getBoundingClientRect().top + window.scrollY - 70
+    window.scrollTo({ top: y, behavior: 'smooth' })
+  }
+}
 
 export default function Services() {
   return (
@@ -75,11 +88,27 @@ export default function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.7, delay: Math.min(i * 0.08, 0.4) }}
-              className="service-card group relative bg-bg-2 border border-line p-6 md:p-10 overflow-hidden transition-all duration-400
-                hover:border-gold hover:-translate-y-1.5 hover:shadow-[0_20px_50px_rgba(0,0,0,0.5)]"
+              id={s.id}
+              onClick={s.href ? () => scrollToSection(s.href) : undefined}
+              role={s.href ? 'link' : undefined}
+              tabIndex={s.href ? 0 : undefined}
+              onKeyDown={
+                s.href
+                  ? (e) => {
+                      if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault()
+                        scrollToSection(s.href)
+                      }
+                    }
+                  : undefined
+              }
+              className={`service-card group relative bg-bg-2 border border-line p-6 md:p-10 overflow-hidden transition-all duration-400 scroll-mt-28
+                hover:border-gold hover:-translate-y-1.5 hover:shadow-[0_20px_50px_rgba(0,0,0,0.5)] ${
+                  s.href ? 'cursor-pointer' : ''
+                }`}
             >
               <span className="absolute top-0 left-0 w-[3px] h-0 bg-gold transition-all duration-400 group-hover:h-full" />
-              <span className="inline-block bg-[rgba(201,163,90,0.1)] text-gold px-2.5 py-1 text-[9px] md:text-[10px] tracking-[0.22em] md:tracking-[0.25em] uppercase mb-3 md:mb-4 border border-[rgba(201,163,90,0.3)]">
+              <span className="inline-block bg-[rgba(198,202,206,0.1)] text-gold px-2.5 py-1 text-[9px] md:text-[10px] tracking-[0.22em] md:tracking-[0.25em] uppercase mb-3 md:mb-4 border border-[rgba(198,202,206,0.3)]">
                 {s.tag}
               </span>
               <div className="flex justify-between items-baseline gap-3 mb-2 flex-wrap">
@@ -96,6 +125,12 @@ export default function Services() {
               <p className="text-[#bcbcbc] text-[13.5px] md:text-sm leading-[1.65] md:leading-[1.7]">
                 {s.desc}
               </p>
+              {s.href && (
+                <span className="inline-flex items-center gap-1.5 mt-4 md:mt-5 text-gold text-[10px] md:text-[11px] tracking-[0.25em] uppercase transition-all group-hover:gap-2.5">
+                  Zobraziť viac
+                  <span aria-hidden="true">→</span>
+                </span>
+              )}
             </motion.div>
           ))}
         </div>

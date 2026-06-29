@@ -33,7 +33,7 @@ export default function Hero() {
         ref={bgRef}
         className="absolute -inset-[5%] bg-cover bg-center bg-no-repeat z-0 will-change-transform"
         style={{
-          backgroundImage: "url('/foto/1.webp')",
+          backgroundImage: "url('/foto/hero.webp')",
           filter: 'brightness(0.35) grayscale(0.2)',
         }}
       />
@@ -41,16 +41,16 @@ export default function Hero() {
         className="absolute inset-0 z-[1] pointer-events-none"
         style={{
           background:
-            'linear-gradient(180deg, rgba(10,10,10,0.5) 0%, rgba(10,10,10,0.85) 100%), radial-gradient(ellipse at center, rgba(201,163,90,0.18) 0%, transparent 55%)',
+            'linear-gradient(180deg, rgba(10,10,10,0.5) 0%, rgba(10,10,10,0.85) 100%), radial-gradient(ellipse at center, rgba(198,202,206,0.18) 0%, transparent 55%)',
         }}
       />
       <div className="absolute inset-0 z-[1] hero-grid pointer-events-none" />
 
       <div className="relative z-[3] w-full max-w-[900px] px-5 md:px-6 py-[90px] md:py-0">
         <img
-          src="/foto/logo.jpg"
+          src="/foto/transparent-lebka.png"
           alt="Barber Shop Majky"
-          className="w-[130px] md:w-[170px] mx-auto mb-6 md:mb-7 hero-logo-anim"
+          className="w-[140px] md:w-[180px] mx-auto my-[-7px] md:my-[-3px] hero-logo-anim"
         />
 
         <motion.span
@@ -64,7 +64,7 @@ export default function Hero() {
             className="absolute top-0 left-0 w-full h-full pointer-events-none"
             style={{
               background:
-                'linear-gradient(90deg, transparent, rgba(201,163,90,0.25), transparent)',
+                'linear-gradient(90deg, transparent, rgba(198,202,206,0.25), transparent)',
               animation: 'shimmerMove 3s infinite 2s',
             }}
           />

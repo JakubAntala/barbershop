@@ -1,6 +1,35 @@
 import { motion, useInView, useMotionValue, animate } from 'framer-motion'
 import { useEffect, useRef } from 'react'
 
+// Reálne 5★ recenzie z Bookia (services.bookio.com/barbershop-majky).
+const reviews = [
+  {
+    name: 'Katka',
+    date: '16. 2. 2026',
+    text: 'Skvelé head spa, veľmi príjemný relax, odporúčam. 👌',
+  },
+  {
+    name: 'Peter',
+    date: '29. 1. 2026',
+    text: 'Skúsený barber, ktorý sa snaží vždy vyhovieť zákazníkovi.',
+  },
+  {
+    name: 'Karaba',
+    date: '20. 5. 2026',
+    text: 'Dnes som bola so synom a môžem len odporučiť — vždy má vlasy upravené na 1.',
+  },
+  {
+    name: 'Jozef',
+    date: '1. 12. 2025',
+    text: 'Majky je kúzelník, ďakujem.',
+  },
+  {
+    name: 'Juraj',
+    date: '30. 4. 2026',
+    text: 'Najlepší barber 🔥',
+  },
+]
+
 function Counter({ target, prefix = '', suffix = '' }) {
   const ref = useRef(null)
   const inView = useInView(ref, { once: true, amount: 0.3 })
@@ -41,7 +70,7 @@ export default function About() {
             <div
               className="relative aspect-[4/5] bg-cover bg-center bg-no-repeat border border-line transition-transform duration-500 md:group-hover:-translate-x-2 md:group-hover:-translate-y-2"
               style={{
-                backgroundImage: "url('/foto/5.jpg')",
+                backgroundImage: "url('/foto/about.webp')",
                 boxShadow: '0 20px 60px rgba(0,0,0,0.6)',
               }}
             />
@@ -67,11 +96,31 @@ export default function About() {
               priniesť mužom kvalitnú starostlivosť, ktorá ide ďaleko za obyčajný
               strih.
             </p>
-            <p className="text-muted mb-4 md:mb-5 text-[15px] md:text-base leading-[1.7] md:leading-[1.8]">
-              Kombinujeme klasické barberské remeslo s modernou trichológiou a
-              Japanese Head Spa rituálom. Riešime padanie vlasov, zdravie pokožky
-              a ponúkame skutočný relax.
-            </p>
+            <div className="mt-5 md:mt-6">
+              <h4 className="text-[11px] md:text-xs tracking-[0.25em] md:tracking-[0.3em] uppercase text-gold mb-2.5 md:mb-3 font-sans font-medium">
+                Čo hovoria zákazníci
+              </h4>
+              <div className="space-y-2 md:space-y-2.5">
+                {reviews.map((r, i) => (
+                  <div
+                    key={i}
+                    className="border border-line bg-bg-3 rounded-sm px-3.5 py-2.5 md:px-4 md:py-3"
+                  >
+                    <div className="flex items-center justify-between gap-3 mb-1">
+                      <span className="text-gold text-[11px] md:text-xs tracking-[0.18em]">
+                        ★★★★★
+                      </span>
+                      <span className="text-[10px] md:text-[11px] tracking-[0.12em] uppercase text-gold">
+                        {r.name}
+                      </span>
+                    </div>
+                    <p className="text-[#cfcfcf] text-[12.5px] md:text-[13px] leading-[1.5] italic">
+                      „{r.text}"
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
             <div className="grid grid-cols-3 gap-4 md:gap-12 mt-8 md:mt-10 pt-6 md:pt-8 border-t border-line">
               <div>
                 <Counter target={2019} />

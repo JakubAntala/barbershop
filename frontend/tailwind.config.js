@@ -8,10 +8,10 @@ export default {
         'bg-2': '#121212',
         'bg-3': '#1a1a1a',
         gold: {
-          DEFAULT: '#c9a35a',
-          light: '#d4b06b',
+          DEFAULT: '#c6cace',
+          light: '#e4e7eb',
         },
-        rust: '#8b3a1f',
+        rust: '#565b62',
         ink: '#ededed',
         muted: '#9a9a9a',
         line: '#2a2a2a',

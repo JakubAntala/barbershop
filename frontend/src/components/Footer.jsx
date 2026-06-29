@@ -73,19 +73,27 @@ export default function Footer() {
                 href="https://instagram.com/barbershopmajky"
                 target="_blank"
                 rel="noreferrer"
-                className="w-11 h-11 md:w-10 md:h-10 border border-line text-muted flex items-center justify-center text-sm transition-all md:hover:border-gold md:hover:text-gold md:hover:-translate-y-0.5 active:border-gold active:text-gold"
+                className="w-11 h-11 md:w-10 md:h-10 border border-line text-muted flex items-center justify-center transition-all md:hover:border-gold md:hover:text-gold md:hover:-translate-y-0.5 active:border-gold active:text-gold"
+                aria-label="Instagram"
                 title="Instagram"
               >
-                IG
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                  <circle cx="12" cy="12" r="4" />
+                  <line x1="17.5" y1="6.5" x2="17.5" y2="6.5" />
+                </svg>
               </a>
               <a
                 href="https://www.facebook.com/profile.php?id=100021212086936"
                 target="_blank"
                 rel="noreferrer"
-                className="w-11 h-11 md:w-10 md:h-10 border border-line text-muted flex items-center justify-center text-sm transition-all md:hover:border-gold md:hover:text-gold md:hover:-translate-y-0.5 active:border-gold active:text-gold"
+                className="w-11 h-11 md:w-10 md:h-10 border border-line text-muted flex items-center justify-center transition-all md:hover:border-gold md:hover:text-gold md:hover:-translate-y-0.5 active:border-gold active:text-gold"
+                aria-label="Facebook"
                 title="Facebook"
               >
-                FB
+                <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
+                  <path d="M14 9h2.5V6H14c-2.21 0-3.5 1.4-3.5 3.6V11H8v3h2.5v7h3v-7H16l.5-3h-3V9.7c0-.5.3-.7.8-.7Z" />
+                </svg>
               </a>
             </div>
           </div>

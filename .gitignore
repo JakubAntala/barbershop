@@ -31,3 +31,12 @@ yarn-error.log*
 # --- Build artefacts ---
 *.tsbuildinfo
 coverage/
+
+# --- Veľké zdrojové fotky/videá (originály – appka používa len optimalizované v frontend/public/foto) ---
+/foto/*.JPG
+/foto/*.JPEG
+/foto/*.jpeg
+/foto/*.MOV
+/foto/*.mov
+/foto/*.PNG
+/foto/SJU_*.jpg
